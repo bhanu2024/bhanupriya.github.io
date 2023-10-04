@@ -217,7 +217,8 @@
     var email = document.getElementById("email").value;
     var subject = document.getElementById("subject").value;
     var message = document.getElementById("message").value;
-
+    document.getElementById("my-form").reset();
+    
     var serviceID = "service_3bu0wqv";
     var templateID = "template_9cei6hl";
 
@@ -232,7 +233,9 @@
       .send(serviceID, templateID, params)
       .then(() => {
         alert("Thank you! Message sent succefully");
+        reset();
       })
       .catch();
+    
   });
 })();
